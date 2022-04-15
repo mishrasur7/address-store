@@ -4,14 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 //Address entity class to save address data of friend in Finland 
 @Entity
 public class Address {
 	
-	@NotNull
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id; 
@@ -20,8 +18,6 @@ public class Address {
 	private String street;
 	private int houseNumber;
 	private String block;
-	
-	@Size(min=5, max=5)
 	private int postalCode;
 	
 	private String city;
@@ -30,7 +26,7 @@ public class Address {
 		
 	}
 
-	public Address(String name, String street, int houseNumber, String block, @Size(min = 5, max = 5) int postalCode,
+	public Address(String name, String street, int houseNumber, String block, int postalCode,
 			String city) {
 		super();
 		this.name = name;

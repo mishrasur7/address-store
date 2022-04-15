@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<title>Friends Address Store</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+
+	<form th:action="@{/logout}" method="post">
+		<input class="btn btn-sm btn-danger" type="submit" value="Log out" />
+	</form>
+	 
+	<h1>Addess store of friends in Finland</h1>
+	<!--  
+	<h2 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h2>
+	-->
+	<table class="table table-striped">
+		<tr>
+			<th>Name</th>
+			<th>Street</th>
+			<th>House No.</th>
+			<th>Block</th>
+			<th>Postal Code</th>
+			<th>City</th>
+		</tr>
+		<tr th:each="address : ${addresses}">
+			<td th:text="${address.name}"></td>
+			<td th:text="${address.street}"></td>
+			<td th:text="${address.houseNumber}"></td>
+			<td th:text="${address.block}"></td>
+			<td th:text="${address.postalCode}"></td>
+			<td th:text="${address.city}"></td>
+			<!--  <td sec:authorize="hasAuthority('ADMIN')" class="btn btn-danger"><a
+				th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
+			<td><a th:href="@{/edit/{id}(id=${book.id})}">Edit</a></td>
+			-->
+		</tr>
+	</table>
+	 <button class="btn btn-success">
+		<a href="/add">Add Student</a>
+	</button> 
+</body>
+</html>
