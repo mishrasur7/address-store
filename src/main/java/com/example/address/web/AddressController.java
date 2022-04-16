@@ -13,7 +13,7 @@ import com.example.address.domain.AddressRepository;
 @Controller
 public class AddressController {
 	
-	//dependency injected with AddressRepository 
+	//dependency injection mapped to AddressRepository 
 	@Autowired
 	private AddressRepository repository;
 	
