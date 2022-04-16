@@ -17,7 +17,7 @@ public class Address {
 	private String name;  
 	private String street;
 	private int houseNumber;
-	private String block;
+	private char block;
 	private int postalCode;
 	
 	private String city;
@@ -26,7 +26,7 @@ public class Address {
 		
 	}
 
-	public Address(String name, String street, int houseNumber, String block, int postalCode,
+	public Address(String name, String street, int houseNumber, char block, int postalCode,
 			String city) {
 		super();
 		this.name = name;
@@ -69,11 +69,11 @@ public class Address {
 		this.houseNumber = houseNumber;
 	}
 
-	public String getBlock() {
+	public char getBlock() {
 		return block;
 	}
 
-	public void setBlock(String block) {
+	public void setBlock(char block) {
 		this.block = block;
 	}
 

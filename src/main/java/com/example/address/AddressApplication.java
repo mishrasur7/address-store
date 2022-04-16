@@ -18,9 +18,9 @@ public class AddressApplication {
 	@Bean
 	public CommandLineRunner addressDemo(AddressRepository repository) {
 		return (args) -> {
-			repository.save(new Address("Alpo Remes", "Kannelmäentie", 2, "D", 00450, "Helsinki"));
-			repository.save(new Address("Mariia Solo", "Porvoontie", 3, "A", 00250, "Provoo"));
-			repository.save(new Address("Sudarsan Koirala", "Kristinharju", 7, "B", 00750, "Espoo"));
+			repository.save(new Address("Alpo Remes", "Kannelmäentie", 2, 'D', 00450, "Helsinki"));
+			repository.save(new Address("Mariia Solo", "Porvoontie", 3, 'A', 00250, "Provoo"));
+			repository.save(new Address("Sudarsan Koirala", "Kristinharju", 7, 'B', 00750, "Espoo"));
 		}; 
 	}
 
