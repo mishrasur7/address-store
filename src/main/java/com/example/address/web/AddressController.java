@@ -3,6 +3,8 @@ package com.example.address.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -36,6 +38,13 @@ public class AddressController {
 	public String saveAddress(Address address) {
 		repository.save(address); 
 		return "redirect:"; 
+	}
+	
+	//get request mapping to edit address
+	@GetMapping(value="/edit{id}")
+	public String editAddress(@PathVariable ("id") Long addressId, Model model) {
+		model.addAttribute("addresses", repository.findById(addressId)); 
+		return "editAddress"; 
 	}
 
 }
