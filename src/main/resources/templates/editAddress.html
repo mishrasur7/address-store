@@ -11,7 +11,8 @@
 <body>
 	<h1>Add address</h1>
 	<div>
-		<form th:object="${address}" th:action="@{save}" action="#" method="post">
+		<form th:object="${addresses}" th:action="@{../save}" action="#" method="post">
+			<input type="hidden" id="id" th:field="*{id}" value=${addresses.id}/>
 		  	<label for="name">Name</label>
 			<input type="text" id="name" th:field="*{name}" />
 			<div style="clear: both; display: block; height: 10px;"></div>

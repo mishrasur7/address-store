@@ -37,11 +37,11 @@ public class AddressController {
 	@PostMapping(value="/save")
 	public String saveAddress(Address address) {
 		repository.save(address); 
-		return "redirect:"; 
+		return "redirect:addresslist"; 
 	}
 	
 	//get request mapping to edit address
-	@GetMapping(value="/edit{id}")
+	@GetMapping(value="/edit/{id}")
 	public String editAddress(@PathVariable ("id") Long addressId, Model model) {
 		model.addAttribute("addresses", repository.findById(addressId)); 
 		return "editAddress"; 
