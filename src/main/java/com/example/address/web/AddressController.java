@@ -46,5 +46,12 @@ public class AddressController {
 		model.addAttribute("addresses", repository.findById(addressId)); 
 		return "editAddress"; 
 	}
+	
+	//get request mapping to delete address with id
+	@GetMapping(value="/delete/{id}")
+	public String deleteAddress(@PathVariable ("id") Long addressId, Model model) {
+		repository.deleteById(addressId);
+		return "redirect:../addresslist"; 
+	}
 
 }
