@@ -53,5 +53,6 @@ public class AddressController {
 		repository.deleteById(addressId);
 		return "redirect:../addresslist"; 
 	}
+	
 
 }
