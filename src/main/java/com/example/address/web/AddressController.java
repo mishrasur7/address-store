@@ -54,5 +54,10 @@ public class AddressController {
 		return "redirect:../addresslist"; 
 	}
 	
+	//request mapping to login page
+	@RequestMapping(value="/login")
+	public String login() {
+		return "login"; 
+	}
 
 }
