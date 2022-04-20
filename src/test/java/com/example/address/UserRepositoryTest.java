@@ -7,18 +7,22 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.example.address.web.AddressController;
+import com.example.address.domain.User;
+import com.example.address.domain.UserRepository;
 
+
+//testing UserRepository class with user
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class AddressApplicationTests {
+public class UserRepositoryTest {
 	
 	@Autowired
-	private AddressController controller; 
-	
-	@Test
-	void contextLoads() throws Exception {
-		assertThat(controller).isNotNull(); 
-	}
+	private UserRepository repository;
 
+	@Test
+	public void findByUsername() {
+		User users = repository.findByUserName("admin");
+
+		assertThat(users.getUserName()).isEqualTo("admin");
+	}
 }

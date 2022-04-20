@@ -3,8 +3,11 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head>
         <title>Address store</title>
+         <link type="text/css" rel="stylesheet" href="css/address.css"
+	th:href="@{css/address.css}" />
     </head>
     <body>
+    	<main>
         <div th:if="${param.error}">
             Invalid user name and password. Please try again later!
         </div>
@@ -18,5 +21,6 @@
         </form>
         <h2>For testing purpose please type user for both username and password.</h2>
         <h2>For testing purpose please type admin for both username and password.</h2>
+        </main>
     </body>
 </html>

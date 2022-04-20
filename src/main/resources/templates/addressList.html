@@ -12,9 +12,11 @@
 </head>
 <body>
 
-	<form th:action="@{/logout}" method="post">
+	<form class="log-out" th:action="@{/logout}" method="post">
 		<input class="btn btn-sm btn-danger" type="submit" value="Log out" />
 	</form>
+	
+	<div class="address-list">
 	 
 	<h1>Addess store of friends in Finland</h1>
 	
@@ -44,5 +46,6 @@
 	 <button class="btn btn-info">
 		<a href="/add">Add Address</a>
 	</button> 
+	</div>
 </body>
 </html>

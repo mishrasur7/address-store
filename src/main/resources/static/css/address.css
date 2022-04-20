@@ -1,7 +1,15 @@
-input {
+.log-out {
   position: absolute;
   top: 5px; 
   right: 50px;
-  width: 80px;
+  width: 50px;
   padding: 20px;   
+}
+
+.address-list {
+	margin: 30px; 
+}
+
+.add-address {
+	margin-left: 200px;  
 }
