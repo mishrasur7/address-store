@@ -10,7 +10,7 @@
 
 </head>
 <body>
-	<div class="edit-address">
+	<div>
 	<h1>Add address</h1>
 		<form th:object="${addresses}" th:action="@{../save}" action="#" method="post">
 			<input type="hidden" id="id" th:field="*{id}" value=${addresses.id}/>
