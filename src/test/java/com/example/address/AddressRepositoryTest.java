@@ -29,7 +29,7 @@ public class AddressRepositoryTest {
 
 	@Test
 	public void createNewAddress() {
-		Address address = new Address("Suraj Mishra", "Pakilantie", 2, 'D', 00660, "Helsinki");
+		Address address = new Address("Suraj Mishra", "Pakilantie", 2, 'D', "00660", "Helsinki");
 		repository.save(address);
 		assertThat(address.getId()).isNotNull();
 	}

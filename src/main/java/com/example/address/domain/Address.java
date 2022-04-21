@@ -20,8 +20,8 @@ public class Address {
 	private int houseNumber;
 	private char block;
 	
-//	@Size(min=5, max=5)
-	private int postalCode;
+
+	private String postalCode;
 	
 	private String city;
 
@@ -31,7 +31,7 @@ public class Address {
 	
 	
 
-	public Address(String name, String street, int houseNumber, char block, int postalCode,
+	public Address(String name, String street, int houseNumber, char block, String postalCode,
 			String city) {
 		super();
 		this.name = name;
@@ -104,13 +104,13 @@ public class Address {
 
 
 
-	public int getPostalCode() {
+	public String getPostalCode() {
 		return postalCode;
 	}
 
 
 
-	public void setPostalCode(int postalCode) {
+	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
 
